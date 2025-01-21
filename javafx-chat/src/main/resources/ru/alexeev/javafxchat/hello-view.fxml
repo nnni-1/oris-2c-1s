@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="ru.alexeev.javafxchat.ChatController" alignment="CENTER" prefWidth="400" prefHeight="600">
+    <ScrollPane fx:id="scrollPane" fitToWidth="true" VBox.vgrow="ALWAYS">
+<!--        <VBox fx:id="messageBox"/>-->
+        <ListView fx:id="messageList"/>
+    </ScrollPane>
+    <HBox spacing="10" alignment="CENTER">
+        <TextArea fx:id="inputField" HBox.hgrow="ALWAYS" promptText="Type your message here..." onKeyPressed="#onKeyPressed"/>
+        <Button text="Send" onAction="#sendMessage"/>
+    </HBox>
+</VBox>

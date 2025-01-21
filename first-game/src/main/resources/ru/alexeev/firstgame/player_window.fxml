@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="ru.alexeev.firstgame.PlayerController" spacing="10" alignment="CENTER" prefWidth="300" prefHeight="400">
+    <Label fx:id="playerNameLabel" style="-fx-font-size: 20px;"/>
+    <ProgressBar fx:id="hpBar" prefWidth="200"/>
+    <Label fx:id="hpLabel" style="-fx-font-size: 16px;"/>
+    <Button fx:id="attackButton" text="Ударить!" onAction="#attack" prefWidth="150"/>
+</VBox>

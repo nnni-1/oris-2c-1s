@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="ru.alexeev.javafxchat.RoomController" prefHeight="200"
+            prefWidth="300">
+    <AnchorPane fx:id="contentPane" layoutY="100" prefHeight="230" prefWidth="480"/>
+
+    <Text text="Введите ID комнаты:" layoutX="20.0" layoutY="40.0"/>
+    <Label fx:id="serverMessageLabel" layoutX="20.0" layoutY="40.0"/>
+    <TextField fx:id="roomIdTextField" layoutX="20.0" layoutY="70.0" prefWidth="260.0"/>
+    <Button fx:id="connectButton" layoutX="100.0" layoutY="110.0" text="Подключиться"/>
+</AnchorPane>

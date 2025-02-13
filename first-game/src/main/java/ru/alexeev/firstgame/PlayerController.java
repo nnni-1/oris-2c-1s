@@ -30,13 +30,11 @@ public class PlayerController {
         this.opponent = opponent;
         this.gameCoordinator = gameCoordinator;
 
-        // Привязка данных игрока
         playerNameLabel.textProperty().bind(player.nameProperty());
         hpBar.progressProperty().bind(player.hpProperty().divide(100.0));
         hpLabel.textProperty().bind(player.hpProperty().asString("HP: %d"));
 
         gameCoordinator.addPlayer(this);
-        // Начальное состояние кнопки
 
     }
 
@@ -46,8 +44,6 @@ public class PlayerController {
             int damage = player.attack();
             opponent.takeDamage(damage);
             gameCoordinator.nextTurn();
-
-            // Проверка конца игры
             if (!opponent.isAlive()) {
                 attackButton.setDisable(true);
                 gameCoordinator.endGame(player);
@@ -58,7 +54,6 @@ public class PlayerController {
     }
 
     public void updateTurn() {
-        // Активировать кнопку только если это ход текущего игрока
         attackButton.setDisable(!gameCoordinator.isCurrentPlayer(player));
     }
 }
